@@ -27,8 +27,8 @@ class SignUp extends Component {
         if (auth.uid) return <Redirect to='/' />
         return (
             <div className="container">
-                <form onSubmit={this.handleSubmit} className="white">
-                    <h5 className="grey-text text-darken-3">Sign Up</h5>
+                <form onSubmit={this.handleSubmit} className="cyan lighten-5 text-darken-3">
+                    <h5 className="red-text">Sign Up</h5>
 
                     <div className="input-field">
                         <label htmlFor="email">Email</label>
@@ -47,7 +47,7 @@ class SignUp extends Component {
 
                     <div className="input-field">
                         <label htmlFor="lastName">Last Name</label>
-                        <input type="text" id="lastName" onChange={this.handleChange} />
+                        <input type="text" id="lastName" onChange={this.handleChange} className="white-text text-darken-3" />
                     </div>
 
                     <div className="input-field">

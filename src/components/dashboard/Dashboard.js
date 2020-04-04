@@ -12,6 +12,7 @@ class Dashboard extends Component {
         if (!auth.uid) return <Redirect to='/signin' />
         return (
             <div className="dashboard container">
+                <h6 className="cyan lighten-5 center">Share your story with us !</h6>
                 <div className="row">
 
                     <div className="col s12 m6">

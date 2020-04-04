@@ -23,3 +23,44 @@ export const createProject = (project) => {
         })
     }
 }
+
+export const editProject = (project) => {
+    return (dispatch, getState, { getFirebase, getFirestore }) => {
+        const firestore = getFirestore()
+        firestore.collection('projects').doc(project.id).update({
+            ...project
+        }).then(() => {
+            dispatch({
+                type: 'EDIT_PROJECT',
+                project
+            })
+        }).catch(err => {
+            dispatch({
+                type: 'EDIT_PROJECT_ERROR',
+                err
+            })
+        })
+    }
+}
+
+export const deleteProject = (id) => {
+    return (dispatch, getState, { getFirebase, getFirestore }) => {
+        const firestore = getFirestore()
+        firestore
+            .collection('projects')
+            .doc(id)
+            .delete()
+            .then(() => {
+                dispatch({
+                    type: 'DELETE_PROJECT',
+                    id
+                })
+            })
+            .catch(err => {
+                dispatch({
+                    type: 'DELETE_PROJECT_ERROR',
+                    err
+                })
+            })
+    }
+}

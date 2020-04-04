@@ -4,4 +4,4 @@
 
 ### An app to let users sign up, log in, creating projects & content
 
-Demo [GitHub Pages](https://marioplan-66b4a.firebaseapp.com/)
+[Demo](https://marioplan-66b4a.firebaseapp.com/)

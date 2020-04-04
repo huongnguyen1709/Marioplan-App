@@ -9,10 +9,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url(/img/mario-bg.png) no-repeat;
+  background: url(/img/mario.jpg) no-repeat;
   background-size: 100%;
   background-position: bottom;
-  background-color: #95e8f3;
   min-height: 100%;
 }
 
@@ -29,6 +28,14 @@ form {
 form button,
 form h5 {
   margin: 20px 0;
+}
+
+.ml {
+  margin-left: 20px;
+}
+
+.mt {
+  margin-top: 15px;
 }
 
 input[type='text']:not(.browser-default):focus:not([readonly]),
