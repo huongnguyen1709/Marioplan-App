@@ -32,6 +32,14 @@ const ProjectDetails = (props) => {
         }
     }
 
+    const onAuthor = () => {
+        if (auth.uid === project.authorId) {
+            return <div>Posted by You</div>
+        } else {
+            return <div>Posted by {project.authorFirstName} {project.authorLastName}</div>
+        }
+    }
+
     if (project) {
         return (
             <div className="container section project-details">
@@ -41,7 +49,7 @@ const ProjectDetails = (props) => {
                         <p>{project.content}</p>
                     </div>
                     <div className="card-action teal lighten-5 text-darken-3">
-                        <div>Posted by {project.authorFirstName} {project.authorLastName}</div>
+                        {onAuthor()}
                         <div>{moment(project.createdAt.toDate()).calendar()}</div>
                     </div>
                 </div>

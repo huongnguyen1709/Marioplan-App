@@ -2,7 +2,16 @@ import React from 'react'
 import moment from 'moment'
 
 const Notifications = (props) => {
-    const { notifications } = props
+    const { notifications, auth } = props
+    const onAuthor = (userId, userName) => {
+        if (auth.uid === userId) {
+            console.log('match')
+            return <span className="pink-text">You </span>
+        } else {
+            return <span className="pink-text">{userName} </span>
+        }
+    }
+
     return (
         <div className="section">
             <div className="card z-depth-0">
@@ -12,7 +21,7 @@ const Notifications = (props) => {
                         {notifications && notifications.map(item => {
                             return (
                                 <li key={item.id}>
-                                    <span className="pink-text">{item.user} </span>
+                                    {onAuthor(item.userId, item.user)}
                                     <span>{item.content}</span>
                                     <div className="grey-text note-date">
                                         {moment(item.time.toDate()).fromNow()}

@@ -16,11 +16,11 @@ class Dashboard extends Component {
                 <div className="row">
 
                     <div className="col s12 m6">
-                        <ProjectList projects={projects} />
+                        <ProjectList projects={projects} auth={auth} />
                     </div>
 
                     <div className="col s12 m5 offset-m1">
-                        <Notifications notifications={notifications} />
+                        <Notifications notifications={notifications} auth={auth} />
                     </div>
 
                 </div>
