@@ -44,11 +44,11 @@ const ProjectDetails = (props) => {
         return (
             <div className="container section project-details">
                 <div className="card z-depth-0">
-                    <div className="card-content cyan lighten-5 text-darken-3">
+                    <div className="card-content pink lighten-4 text-darken-3">
                         <span className="card-title">{project.title}</span>
                         <p>{project.content}</p>
                     </div>
-                    <div className="card-action teal lighten-5 text-darken-3">
+                    <div className="card-action pink lighten-3 text-darken-3">
                         {onAuthor()}
                         <div>{moment(project.createdAt.toDate()).calendar()}</div>
                     </div>

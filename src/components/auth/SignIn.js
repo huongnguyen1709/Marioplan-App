@@ -25,7 +25,7 @@ class SignIn extends Component {
         if (auth.uid) return <Redirect to='/' />
         return (
             <div className="container">
-                <form onSubmit={this.handleSubmit} className="cyan lighten-5 text-darken-3">
+                <form onSubmit={this.handleSubmit} className="pink lighten-4 text-darken-3">
                     <h5 className="red-text">Sign In</h5>
                     <div className="input-field">
                         <label htmlFor="email">Email</label>
@@ -35,7 +35,7 @@ class SignIn extends Component {
                         <label htmlFor="password">Password</label>
                         <input type="password" id="password" onChange={this.handleChange} />
                     </div>
-                    <div className="grey-text">
+                    <div className="black-text">
                         <span>Email: test@mario.com</span> <br />
                         <span>Password: 123456</span>
                     </div>

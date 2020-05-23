@@ -9,10 +9,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url(/img/mario.jpg) no-repeat;
+  background: url(/img/mario.jpg);
   background-size: 100%;
-  background-position: bottom;
-  min-height: 100%;
+
 }
 
 code {
@@ -44,4 +43,22 @@ input[type='password']:not(.browser-default):focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
   border-color: #ec407a;
   box-shadow: none;
+}
+
+.card {
+  border: 1px solid grey;
+}
+
+@media only screen and (max-width: 1000px) {
+  nav .brand-logo.left {
+      margin-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  nav .brand-logo.left {
+      left: 0.5rem;
+      font-size: 20px;
+      margin-left: 5px;
+  }
 }

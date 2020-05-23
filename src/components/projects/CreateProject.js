@@ -26,7 +26,7 @@ class CreateProject extends Component {
         if (!auth.uid) return <Redirect to='/signin' />
         return (
             <div className="container">
-                <form onSubmit={this.handleSubmit} className="cyan lighten-5 text-darken-3">
+                <form onSubmit={this.handleSubmit} className="pink lighten-4 text-darken-3">
                     <h5>New Blog</h5>
                     <div className="input-field">
                         <label htmlFor="title">Title</label>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const ProjectList = ({ projects, auth }) => {
     return (
-        <div className="project-list section">
+        <div className="section">
 
             {projects && projects.map(project => {
                 return (

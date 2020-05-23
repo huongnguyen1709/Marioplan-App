@@ -15,7 +15,7 @@ const Notifications = (props) => {
     return (
         <div className="section">
             <div className="card z-depth-0">
-                <div className="card-content teal lighten-5 text-darken-3">
+                <div className="card-content pink lighten-4 text-darken-3">
                     <span className="card-title">Notifications</span>
                     <ul className="notifications">
                         {notifications && notifications.map(item => {
@@ -23,7 +23,7 @@ const Notifications = (props) => {
                                 <li key={item.id}>
                                     {onAuthor(item.userId, item.user)}
                                     <span>{item.content}</span>
-                                    <div className="grey-text note-date">
+                                    <div className="black-text note-date">
                                         {moment(item.time.toDate()).fromNow()}
                                     </div>
                                 </li>
